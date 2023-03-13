@@ -22,6 +22,7 @@ def compare_images(imageA, imageB, title):
     # index for the images
     m = mse(imageA, imageB)
     s = ssim(imageA, imageB)
+    print(f'mse:{m},ssim:{s}')
     # setup the figure
     fig = plt.figure(title)
     plt.suptitle("MSE: %.2f, SSIM: %.2f" % (m, s))
@@ -46,6 +47,11 @@ shopped = cv2.imread("images/jp_gates_photoshopped.png")
 original = cv2.cvtColor(original, cv2.COLOR_BGR2GRAY)
 contrast = cv2.cvtColor(contrast, cv2.COLOR_BGR2GRAY)
 shopped = cv2.cvtColor(shopped, cv2.COLOR_BGR2GRAY)
+
+# resize images
+# original = cv2.resize(original, (8, 8))
+# contrast = cv2.resize(contrast, (8, 8))
+# shopped = cv2.resize(shopped, (8, 8))
 
 # initialize the figure
 fig = plt.figure("Images")
