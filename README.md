@@ -1,5 +1,7 @@
 # compare-two-images
 
+https://pyimagesearch.com/2014/09/15/python-compare-two-images/
+
 default
 mse:0.0,ssim:1.0
 mse:1658.547619047619,ssim:0.7699842356349095
